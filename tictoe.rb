@@ -198,7 +198,7 @@ class AI < Player
     elsif opponent_can_win
       return opponent_can_win[0]
     else
-      return winnable_path(ai_paths, 2)[0]
+      return winnable_path(ai_paths, 2)[0] || winnable_path(ai_paths, 3)[0]
     end
   end
 
